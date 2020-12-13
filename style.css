@@ -10,20 +10,37 @@ License:      GNU General Public License v2 or later
 License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  2021-child 
 */
-div#content {
-    width: 70%;
-    float: left;
-}
+
 @media only screen and (min-width: 1024px) {
-aside.widget-area {
-    width: 25%;
-    float: left;
+    div#content {
+        width: 70%;
+        float: left;
+    }
+    aside.widget-area {
+        width: 25%;
+        float: left;
+    }
+    .widget-area {
+        grid-template-columns: 1fr;
+    }
 }
-.widget-area {
-    grid-template-columns: 1fr;
-}
+
+@media only screen and (min-width: 482px) {
+    .site-header {
+        padding-bottom: .5em;
+    }
 }
 
 #colophon {
-    clear:both;
+    clear: both;
+}
+
+.site-main {
+    padding-top: 0;
+}
+
+figcaption.wp-caption-text {
+    margin: 0 auto;
+    width: 80%;
+    font-style: italic;
 }
