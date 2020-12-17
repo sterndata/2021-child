@@ -13,13 +13,12 @@ Text Domain:  2021-child
     
     .wp-custom-logo .site-header {
         align-items: center;
-        background: rgba(8, 8, 8, .5);
         padding-top: 1em;
         padding-left: 1em;
         padding-right: 1em;
         max-width: initial;
+        margin-bottom:0;
     }
-    
     @media only screen and (min-width: 1024px) {
         div#content {
             width: 70%;
