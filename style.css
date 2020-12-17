@@ -8,7 +8,7 @@ Template:     twentytwentyone
 Version:      1.0.0
 License:      GNU General Public License v2 or later
 License URI:  http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:  2021-child 
+Text Domain:  sds_2021-child 
 */
     
     .wp-custom-logo .site-header {
@@ -37,6 +37,13 @@ Text Domain:  2021-child
         }
     }
     
+    @media only screen and (min-width: 822px) {
+        .site-footer > .site-info {
+            display: block;
+            text-align: center;
+        }
+    }
+
     @media only screen and (min-width: 482px) {
         .site-header {
             padding-bottom: .5em;
