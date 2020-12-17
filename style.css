@@ -15,10 +15,14 @@ Text Domain:  2021-child
     div#content {
         width: 70%;
         float: left;
+        padding-left: 1em;
     }
     aside.widget-area {
-        width: 25%;
-        float: left;
+        width: 26%;
+        float: right;
+        margin-top: 0;
+        padding-right: 1em;
+        font-size: 80%;
     }
     .widget-area {
         grid-template-columns: 1fr;
