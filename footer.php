@@ -54,7 +54,7 @@
 			<?php
 			$copystr = get_theme_mod( 'copyright', '' );
 				printf(
-					esc_html__( '&copy;' . date( 'Y' ) . ' %s', 'sds_2021-child' ),
+					esc_html__( '&copy;' . date( 'Y' ) . ' %s', 'sds_2021_child' ),
 					$copystr
 				);
 				?>
