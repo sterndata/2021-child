@@ -8,12 +8,12 @@ function my_theme_enqueue_styles() {
 /**
 * add fields to the customizer
 */
-function sds_child_theme_customize_register( $wp_customize ) {
+function sds_2021-child_theme_customize_register( $wp_customize ) {
 	//All our sections, settings, and controls will be added here
 	$wp_customize->add_section(
-		'sds_child_theme_customizations',
+		'sds_2021-child_theme_customizations',
 		array(
-			'title'    => __( 'Theme Settings', 'sds_child' ),
+			'title'    => __( 'Theme Settings', 'sds_2021-child' ),
 			'priority' => 999,
 		)
 	);
@@ -36,8 +36,8 @@ function sds_child_theme_customize_register( $wp_customize ) {
 			$wp_customize,
 			'masthead_background_color',
 			array(
-				'label'    => __( 'Masthead Background', 'sds_child' ),
-				'section'  => 'sds_child_theme_customizations',
+				'label'    => __( 'Masthead Background', 'sds_2021-child' ),
+				'section'  => 'sds_2021-child_theme_customizations',
 				'settings' => 'masthead_background_color',
 			)
 		)
@@ -47,8 +47,8 @@ function sds_child_theme_customize_register( $wp_customize ) {
 			$wp_customize,
 			'copyright',
 			array(
-				'label'    => __( 'Copyright', 'sds_child' ),
-				'section'  => 'sds_child_theme_customizations',
+				'label'    => __( 'Copyright', 'sds_2021-child' ),
+				'section'  => 'sds_2021-child_theme_customizations',
 				'settings' => 'copyright',
 				'type'     => 'text',
 			)
@@ -58,33 +58,33 @@ function sds_child_theme_customize_register( $wp_customize ) {
 		'hide_powered_by',
 		array(
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'sds_child_sanitize_checkbox',
+			'sanitize_callback' => 'sds_2021-child_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
 		'hide_powered_by',
 		array(
 			'type'        => 'checkbox',
-			'section'     => 'sds_child_theme_customizations', // Add a default or your own section
+			'section'     => 'sds_2021-child_theme_customizations', // Add a default or your own section
 			'label'       => __( 'Hide Powered By WordPress' ),
 			'description' => __( 'Check to hide Powered By in the footer.' ),
 		)
 	);
 
 }
-add_action( 'customize_register', 'sds_child_theme_customize_register' );
+add_action( 'customize_register', 'sds_2021-child_theme_customize_register' );
 
-function sds_child_sanitize_checkbox( $checked ) {
+function sds_2021-child_sanitize_checkbox( $checked ) {
 	// Boolean check.
 	return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
 /**
  * Generate CSS from the options
  */
-function sds_child_theme_customize_css() {  ?>
+function sds_2021-child_theme_customize_css() {  ?>
 		 <style type="text/css">
 			 .wp-custom-logo .site-header { background: <?php echo get_theme_mod( 'masthead_background_color', '#000000' ); ?>; }
 		 </style>
 	<?php
 }
-add_action( 'wp_head', 'sds_child_theme_customize_css' );
+add_action( 'wp_head', 'sds_2021-child_theme_customize_css' );
