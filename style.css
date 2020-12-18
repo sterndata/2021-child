@@ -17,6 +17,12 @@ Text Domain:  sds_2021-child
 :root {
 --global--font-size-page-title: var(--global--font-size-xl);
 }
+
+.singular .entry-header {
+    padding-bottom: 1.5em;
+    margin-bottom: 1em;
+    padding-top: 2em;
+}
     .wp-custom-logo .site-header {
         align-items: center;
         padding-top: 1em;
