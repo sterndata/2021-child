@@ -40,7 +40,7 @@
 			</nav><!-- .footer-navigation -->
 		<?php endif; ?>
 		<div class="site-info">
-			<?php if (!get_theme_mod('hide_powered_by', false ) ) { ?>
+			<?php if ( ! get_theme_mod( 'hide_powered_by', false ) ) { ?>
 			<div class="powered-by">
 				<?php
 				printf(
@@ -50,11 +50,11 @@
 				?>
 			</div><!-- .powered-by -->
 			<?php } ?>
-            <div class="footer-copyright">
-            <?php
-            $copystr = get_theme_mod('copyright', ''); 
+			<div class="footer-copyright">
+			<?php
+			$copystr = get_theme_mod( 'copyright', '' );
 				printf(
-					esc_html__( '&copy;'. date('Y') . ' %s', 'sds_2021-child' ),
+					esc_html__( '&copy;' . date( 'Y' ) . ' %s', 'sds_2021-child' ),
 					$copystr
 				);
 				?>
