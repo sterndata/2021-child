@@ -94,3 +94,11 @@ figcaption.wp-caption-text {
     text-align: center;
     float: left;
     padding-right: 2em;
+}
+
+/* match to the width of the content above */
+.pagination .nav-links, .comments-pagination .nav-links {
+    margin-left: auto;
+    max-width: var(--responsive--aligndefault-width);
+    margin-right: auto;
+}
