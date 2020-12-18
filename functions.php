@@ -39,6 +39,7 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 				'label'    => __( 'Masthead Background', 'sds_2021_child' ),
 				'section'  => 'sds_2021_child_theme_customizations',
 				'settings' => 'masthead_background_color',
+				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		)
 	);
@@ -83,7 +84,7 @@ function sds_2021_child_sanitize_checkbox( $checked ) {
  */
 function sds_2021_child_theme_customize_css() {  ?>
 		 <style type="text/css">
-			 .wp-custom-logo .site-header { background: <?php echo get_theme_mod( 'masthead_background_color', '#000000' ); ?>; }
+			 .wp-custom-logo .site-header { background: <?php echo  get_theme_mod( 'masthead_background_color', '#000000' ) ; ?>; }
 		 </style>
 	<?php
 }
