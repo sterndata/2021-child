@@ -40,21 +40,20 @@
 			</nav><!-- .footer-navigation -->
 		<?php endif; ?>
 		<div class="site-info">
+			<?php if (!get_theme_mod('hide_powered_by', false ) ) { ?>
 			<div class="powered-by">
 				<?php
 				printf(
-					/* translators: %s: WordPress. */
 					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
 					'<a href="' . esc_attr__( 'https://wordpress.org/', 'twentytwentyone' ) . '">WordPress</a>'
 				);
 				?>
 			</div><!-- .powered-by -->
+			<?php } ?>
             <div class="footer-copyright">
             <?php
             $copystr = get_theme_mod('copyright', ''); 
 				printf(
-                    /* translators: %s: WordPress. */
-                    
 					esc_html__( '&copy;'. date('Y') . ' %s', 'sds_2021-child' ),
 					$copystr
 				);

@@ -11,7 +11,7 @@ function my_theme_enqueue_styles() {
 function sds_child_theme_customize_register( $wp_customize ) {
     //All our sections, settings, and controls will be added here
     $wp_customize->add_section( 'sds_child_theme_customizations' , array(
-        'title'      => __( 'Theme Settings', 'sds_2015_child' ),
+        'title'      => __( 'Theme Settings', 'sds_child' ),
         'priority'   => 999,
     ) );
     $wp_customize->add_setting( 'masthead_background_color' , array(
@@ -27,15 +27,30 @@ function sds_child_theme_customize_register( $wp_customize ) {
         'section'    => 'sds_child_theme_customizations',
         'settings'   => 'masthead_background_color',
     ) ) );
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'copyright', array(
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'copyright', array(
         'label'      => __( 'Copyright', 'sds_child' ),
         'section'    => 'sds_child_theme_customizations',
         'settings'   => 'copyright',
         'type'       => 'text',
     ) ) );
+    $wp_customize->add_setting( 'hide_powered_by', array(
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sds_child_sanitize_checkbox',
+      ) );
+      $wp_customize->add_control( 'hide_powered_by', array(
+        'type' => 'checkbox',
+        'section' => 'sds_child_theme_customizations', // Add a default or your own section
+        'label' => __( 'Hide Powered By WordPress' ),
+        'description' => __( 'Check to hide Powered By in the footer.' ),
+      ) );
+      
     }
 add_action( 'customize_register', 'sds_child_theme_customize_register' );
 
+function sds_child_sanitize_checkbox( $checked ) {
+    // Boolean check.
+    return ( ( isset( $checked ) && true == $checked ) ? true : false );
+  }
 /**
  * Generate CSS from the options
  */
