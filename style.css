@@ -18,6 +18,10 @@ Text Domain:  sds_2021-child
             --global--font-size-page-title: var(--global--font-size-xl);
         }
 
+        h1.page-title {
+             margin-top: 1em;
+        }
+
         .singular .entry-header {
             padding-bottom: 1.5em;
             margin-bottom: 1em;
