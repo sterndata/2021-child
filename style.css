@@ -10,7 +10,13 @@ License:      GNU General Public License v2 or later
 License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  sds_2021-child 
 */
-    
+
+/**
+* override globals
+**/
+:root {
+--global--font-size-page-title: var(--global--font-size-xl);
+}
     .wp-custom-logo .site-header {
         align-items: center;
         padding-top: 1em;
