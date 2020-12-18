@@ -1,93 +1,96 @@
-        /*
-Theme Name:    SDS TwentyTwentyOne Child
-
-Description:   Right Sidebar
-Author:       Steven Stern
-Author URI:   https://www.sterndata.com
-Template:     twentytwentyone
-Version:      1.0.0
-License:      GNU General Public License v2 or later
-License URI:  http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:  sds_2021-child 
+/*
+Theme Name: SDS TwentyTwentyOne Child
+Description:Right Sidebar
+Author: Steven Stern
+Author URI:https://www.sterndata.com
+Template:twentytwentyone
+Version:1.0.0
+License:GNU General Public License v2 or later
+License URI:http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:sds_2021-child 
 */
 
 /*
  * override globals
 */
 :root {
-            --global--font-size-page-title: var(--global--font-size-xl);
-        }
+    --global--font-size-page-title: var(--global--font-size-xl);
+}
 
-        h1.page-title {
-             margin-top: 1em;
-        }
+h1.page-title {
+    margin-top: 1em;
+}
 
-        .singular .entry-header {
-            padding-bottom: 1.5em;
-            margin-bottom: 1em;
-            padding-top: 2em;
-        }
+.entry-header h2.entry-title:first-of-type {
+    margin-top: 1em;
+}
 
-        .wp-custom-logo .site-header {
-            align-items: center;
-            padding-top: 1em;
-            padding-left: 1em;
-            padding-right: 1em;
-            max-width: initial;
-            margin-bottom: 0;
-        }
+.singular .entry-header {
+    padding-bottom: 1.5em;
+    margin-bottom: 1em;
+    padding-top: 2em;
+}
 
-        @media only screen and (min-width: 1024px) {
-            div#content {
-                width: 70%;
-                float: left;
-                padding-left: 1em;
-            }
+.wp-custom-logo .site-header {
+    align-items: center;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: initial;
+    margin-bottom: 0;
+}
 
-            aside.widget-area {
-                width: 26%;
-                float: right;
-                margin-top: 0;
-                padding-right: 1em;
-                font-size: 80%;
-            }
+@media only screen and (min-width: 1024px) {
+    div#content {
+        width: 70%;
+        float: left;
+        padding-left: 1em;
+    }
 
-            .widget-area {
-                grid-template-columns: 1fr;
-            }
-        }
+    aside.widget-area {
+        width: 26%;
+        float: right;
+        margin-top: 0;
+        padding-right: 1em;
+        font-size: 80%;
+    }
 
-        @media only screen and (min-width: 822px) {
-            .site-footer>.site-info {
-                display: block;
-                text-align: center;
-            }
-        }
+    .widget-area {
+        grid-template-columns: 1fr;
+    }
+}
 
-        @media only screen and (min-width: 482px) {
-            .site-header {
-                padding-bottom: .5em;
-            }
-        }
+@media only screen and (min-width: 822px) {
+    .site-footer>.site-info {
+        display: block;
+        text-align: center;
+    }
+}
 
-        #colophon {
-            clear: both;
-        }
+@media only screen and (min-width: 482px) {
+    .site-header {
+        padding-bottom: .5em;
+    }
+}
 
-        .site-main {
-            padding-top: 0;
-        }
+#colophon {
+    clear: both;
+}
 
-        figcaption.wp-caption-text {
-            margin: 0 auto;
-            width: 80%;
-            font-style: italic;
-        }
+.site-main {
+    padding-top: 0;
+}
 
-        .site-header>.site-logo {
-            width: auto;
-            padding-bottom: 0;
-            border-bottom: initial;
-            text-align: center;
-            float: left;
-            padding-right: 2em;
+figcaption.wp-caption-text {
+    margin: 0 auto;
+    width: 80%;
+    font-style: italic;
+}
+
+.site-header>.site-logo {
+    width: auto;
+    padding-bottom: 0;
+    border-bottom: initial;
+    text-align: center;
+    float: left;
+    padding-right: 2em;
