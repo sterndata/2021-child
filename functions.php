@@ -36,13 +36,14 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 			$wp_customize,
 			'masthead_background_color',
 			array(
-				'label'    => __( 'Masthead Background', 'sds_2021_child' ),
-				'section'  => 'sds_2021_child_theme_customizations',
-				'settings' => 'masthead_background_color',
+				'label'             => __( 'Masthead Background', 'sds_2021_child' ),
+				'section'           => 'sds_2021_child_theme_customizations',
+				'settings'          => 'masthead_background_color',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		)
 	);
+
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
@@ -62,6 +63,13 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'sds_2021_child_sanitize_checkbox',
 		)
 	);
+	$wp_customize->add_setting(
+		'masthead_border',
+		array(
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'sds_2021_child_sanitize_checkbox',
+		)
+	);
 	$wp_customize->add_control(
 		'hide_powered_by',
 		array(
@@ -69,6 +77,16 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 			'section'     => 'sds_2021_child_theme_customizations', // Add a default or your own section
 			'label'       => __( 'Hide Powered By WordPress' ),
 			'description' => __( 'Check to hide Powered By in the footer.' ),
+		)
+	);
+
+	$wp_customize->add_control(
+		'masthead_border',
+		array(
+			'type'        => 'checkbox',
+			'section'     => 'sds_2021_child_theme_customizations', // Add a default or your own section
+			'label'       => __( 'Border below masthead?' ),
+			'description' => __( 'Add a border below the masthead.' ),
 		)
 	);
 
@@ -84,8 +102,12 @@ function sds_2021_child_sanitize_checkbox( $checked ) {
  */
 function sds_2021_child_theme_customize_css() {  ?>
 		 <style type="text/css">
-			 .wp-custom-logo .site-header { background: <?php echo  get_theme_mod( 'masthead_background_color', '#000000' ) ; ?>; }
-		 </style>
+			 .wp-custom-logo .site-header { 
+				 background: <?php echo  get_theme_mod( 'masthead_background_color', '#000000' ); ?>; 
 	<?php
+	if ( get_theme_mod( 'masthead_border', false ) ) {
+		echo 'border-bottom: 1px solid;';
+		echo '} </style>';
+	}
 }
 add_action( 'wp_head', 'sds_2021_child_theme_customize_css' );
