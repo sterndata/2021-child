@@ -40,6 +40,10 @@ h1.page-title {
     margin-bottom: 0;
 }
 
+.entry-content>*:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
+   max-width:90%;
+}
+
 @media only screen and (min-width: 1024px) {
     div#content {
         width: 70%;
