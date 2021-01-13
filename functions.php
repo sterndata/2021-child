@@ -107,7 +107,7 @@ function sds_2021_child_theme_customize_css() {  ?>
 	<?php
 	if ( get_theme_mod( 'masthead_border', false ) ) {
 		echo 'border-bottom: 1px solid;';
-		echo '} </style>';
-	}
+		}
+	echo '} </style>';
 }
 add_action( 'wp_head', 'sds_2021_child_theme_customize_css' );
