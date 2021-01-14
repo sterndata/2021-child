@@ -90,6 +90,25 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting(
+		'masthead_border_color',
+		array(
+			'default'   => '#000000',
+			'transport' => 'refresh',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'masthead_border_color',
+			array(
+				'label'             => __( 'Masthead border color', 'sds_2021_child' ),
+				'section'           => 'sds_2021_child_theme_customizations',
+				'settings'          => 'masthead_border_color',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		)
+	);
 }
 add_action( 'customize_register', 'sds_2021_child_theme_customize_register' );
 
@@ -106,7 +125,7 @@ function sds_2021_child_theme_customize_css() {  ?>
 				 background: <?php echo  get_theme_mod( 'masthead_background_color', '#000000' ); ?>; 
 	<?php
 	if ( get_theme_mod( 'masthead_border', false ) ) {
-		echo 'border-bottom: 1px solid;';
+		echo 'border-bottom: 1px solid'. get_theme_mod( 'masthead_border_color', '#000000' ) . ';';
 		}
 	echo '} </style>';
 }
