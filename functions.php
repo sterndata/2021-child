@@ -125,7 +125,7 @@ function sds_2021_child_theme_customize_css() {  ?>
 				 background: <?php echo  get_theme_mod( 'masthead_background_color', '#000000' ); ?>; 
 	<?php
 	if ( get_theme_mod( 'masthead_border', false ) ) {
-		echo 'border-bottom: 1px solid'. get_theme_mod( 'masthead_border_color', '#000000' ) . ';';
+		echo 'border-bottom: 1px solid '. get_theme_mod( 'masthead_border_color', '#000000' ) . ';';
 		}
 	echo '} </style>';
 }
