@@ -10,9 +10,11 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:sds_2021_child 
 */
 
+
 /*
  * override globals
 */
+
 :root {
     --global--font-size-page-title: var(--global--font-size-xl);
 }
@@ -41,7 +43,7 @@ h1.page-title {
 }
 
 .entry-content>*:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
-   max-width:90%;
+    max-width: 90%;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -50,7 +52,6 @@ h1.page-title {
         float: left;
         padding-left: 1em;
     }
-
     aside.widget-area {
         width: 26%;
         float: right;
@@ -58,7 +59,6 @@ h1.page-title {
         padding-right: 1em;
         font-size: 80%;
     }
-
     .widget-area {
         grid-template-columns: 1fr;
     }
@@ -100,9 +100,16 @@ figcaption.wp-caption-text {
     padding-right: 2em;
 }
 
+
 /* match to the width of the content above */
-.pagination .nav-links, .comments-pagination .nav-links {
+
+.pagination .nav-links,
+.comments-pagination .nav-links {
     margin-left: auto;
     max-width: var(--responsive--aligndefault-width);
     margin-right: auto;
+}
+
+nav.footer-navigation {
+    margin-top: 0;
 }
