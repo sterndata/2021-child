@@ -130,15 +130,3 @@ function sds_2021_child_theme_customize_css() {  ?>
 	echo '} </style>';
 }
 add_action( 'wp_head', 'sds_2021_child_theme_customize_css' );
-
-/*
- * register a footer menu
- */
-function sds_2021_child_theme_register_nav_menu() {
-		register_nav_menus(
-			array(
-				'footer_menu' => __( 'Footer Menu', 'sds_2021_child' ),
-			)
-		);
-}
-add_action( 'after_setup_theme', 'sds_2021_child_theme_register_nav_menu', 0 );
