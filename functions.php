@@ -86,7 +86,7 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'section'     => 'sds_2021_child_theme_customizations', // Add a default or your own section
 			'label'       => __( 'Border below masthead?', 'sds_2021_child' ),
-			'description' => __( 'Add a border below the masthead.' 'sds_2021_child' ),
+			'description' => __( 'Add a border below the masthead.', 'sds_2021_child' ),
 		)
 	);
 
