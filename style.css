@@ -113,3 +113,16 @@ figcaption.wp-caption-text {
 nav.footer-navigation {
     margin-top: 0;
 }
+
+.sticky {
+    background-color: rgba(0, 0, 0, .1);
+    box-shadow: 1px 5px 5px #444;
+}
+
+.sticky .site-main>article>.entry-footer {
+    border: none;
+}
+
+.sticky .entry-header h2.entry-title:first-of-type {
+    padding-top: .5em;
+}
