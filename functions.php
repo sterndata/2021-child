@@ -22,6 +22,7 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 		array(
 			'default'   => '#000000',
 			'transport' => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_setting(
@@ -29,6 +30,7 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 		array(
 			'default'   => '',
 			'transport' => 'refresh',
+			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
@@ -95,6 +97,7 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 		array(
 			'default'   => '#000000',
 			'transport' => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_control(
