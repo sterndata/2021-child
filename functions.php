@@ -20,16 +20,16 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'masthead_background_color',
 		array(
-			'default'   => '#000000',
-			'transport' => 'refresh',
+			'default'           => '#000000',
+			'transport'         => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_setting(
 		'copyright',
 		array(
-			'default'   => '',
-			'transport' => 'refresh',
+			'default'           => '',
+			'transport'         => 'refresh',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
@@ -95,8 +95,8 @@ function sds_2021_child_theme_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'masthead_border_color',
 		array(
-			'default'   => '#000000',
-			'transport' => 'refresh',
+			'default'           => '#000000',
+			'transport'         => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
