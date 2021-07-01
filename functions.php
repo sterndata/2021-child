@@ -133,3 +133,8 @@ function sds_2021_child_theme_customize_css() {  ?>
 	echo '} </style>';
 }
 add_action( 'wp_head', 'sds_2021_child_theme_customize_css' );
+
+/**
+ * Let's check on block templates and see what's up
+ */
+add_theme_support( 'block-templates' );
