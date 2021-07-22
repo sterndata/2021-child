@@ -126,4 +126,10 @@ nav.footer-navigation {
 
 .sticky .entry-header h2.entry-title:first-of-type {
     padding-top: .5em;
-}
+
+
+/* fix since wp ver 5.8 */
+@media only screen and (min-width: 1024px)
+.widget-area {
+    /* grid-template-columns: repeat(3,minmax(0,1fr)); */
+}}
